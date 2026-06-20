@@ -12,7 +12,7 @@ export default function Download() {
           premier bilan frigorifique en moins de cinq minutes.
         </p>
 
-        <a href="/apk/brefcalc.apk" download className="btn btn--download">
+        <a href="/apk/app-release.apk" download className="btn btn--download">
           <DownloadIcon />
           Télécharger le fichier .apk
         </a>
