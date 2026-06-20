@@ -1,0 +1,149 @@
+.report {
+  padding: 96px 0;
+  background: var(--paper);
+}
+
+.report__inner {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.report__lede {
+  font-size: 15.5px;
+  color: var(--navy-soft);
+  margin: 16px 0 26px;
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.report__checks {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.report__checks li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 14.5px;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.report__checks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--mint-soft);
+  border: 1.5px solid var(--mint);
+}
+
+.report__doc {
+  display: flex;
+  justify-content: center;
+}
+
+.doc {
+  width: 100%;
+  max-width: 320px;
+  background: var(--white);
+  border-radius: var(--radius-m);
+  box-shadow: 0 24px 50px -18px rgba(26, 31, 54, 0.18);
+  padding: 28px 26px;
+  transform: rotate(-1.5deg);
+}
+
+.doc__bar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--blue);
+  margin-bottom: 18px;
+}
+
+.doc__row {
+  height: 9px;
+  border-radius: 4px;
+  background: var(--paper-line);
+}
+
+.doc__row--title {
+  width: 70%;
+  height: 12px;
+  background: var(--navy);
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.doc__row--sub {
+  width: 45%;
+}
+
+.doc__divider {
+  height: 1px;
+  background: var(--paper-line);
+  margin: 20px 0 16px;
+}
+
+.doc__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.doc__line span:first-child {
+  width: 60%;
+  height: 7px;
+  border-radius: 3px;
+  background: var(--paper-line);
+}
+
+.doc__line span:last-child {
+  width: 16%;
+  height: 7px;
+  border-radius: 3px;
+  background: var(--paper-line);
+}
+
+.doc__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1.5px dashed var(--paper-line);
+}
+
+.doc__total span:first-child {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy-soft);
+}
+
+.doc__total span:last-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--mint);
+}
+
+@media (max-width: 880px) {
+  .report__inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .report__doc {
+    order: -1;
+  }
+
+  .doc {
+    transform: none;
+  }
+}

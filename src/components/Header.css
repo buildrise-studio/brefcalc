@@ -1,0 +1,134 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.header--scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: var(--paper-line);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 24px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.header__logo {
+  height: 36px;
+  width: auto;
+}
+
+.header__name {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.header__nav a {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--navy-soft);
+  transition: color 0.15s ease;
+}
+
+.header__nav a:hover {
+  color: var(--blue);
+}
+
+.header__cta {
+  flex-shrink: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-s);
+  transition: background 0.15s ease;
+}
+
+.header__cta:hover {
+  background: var(--blue-deep);
+}
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.header__burger span {
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+}
+
+.header__mobile {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .header__nav,
+  .header__cta {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 20px 20px;
+    background: var(--white);
+    border-bottom: 1px solid var(--paper-line);
+    gap: 4px;
+  }
+
+  .header__mobile a {
+    padding: 12px 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--navy-soft);
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .header__mobile-cta {
+    margin-top: 10px;
+    text-align: center;
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 12px;
+    border-radius: var(--radius-s);
+    font-weight: 600;
+    border-bottom: none !important;
+  }
+}
